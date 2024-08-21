@@ -70,5 +70,6 @@ class ReviewModel(BaseModel):
 
 
 class ReviewsResponseModel(BaseModel):
+    next_page_token: str = Field(alias='nextPageToken', default=None)
     page_info: PageInfoModel = Field(alias='pageInfo')
-    items: List[ReviewModel]
+    reviews: List[ReviewModel] = Field(alias='items')
