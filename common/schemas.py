@@ -1,3 +1,4 @@
+import json
 from typing import List
 from datetime import datetime
 from pydantic import BaseModel, Field
@@ -45,8 +46,7 @@ class TopLevelSnippetModel(BaseModel):
     chanel_id: str = Field(alias='channelId')
     video_id: str = Field(alias='videoId')
     review_text: str = Field(alias='textDisplay')
-    original_text_review: str
-    Field(alias='textOriginal')
+    original_text_review: str = Field(alias='textOriginal')
     author_name: str = Field(alias='authorDisplayName')
     like_count: int = Field(alias='likeCount')
     published_at: datetime = Field(alias='publishedAt')
