@@ -133,8 +133,3 @@ class GoogleAPIClient:
             reviews = self._get_reviews(video=video)
             all_reviews.extend(reviews)
         return all_reviews
-
-
-chanel_link = 'https://www.youtube.com/@user-zu4xh6vb4p'
-client = GoogleAPIClient(chanel_link=chanel_link)
-client.run()
